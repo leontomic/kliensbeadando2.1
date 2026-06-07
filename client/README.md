@@ -1,0 +1,1 @@
+Ebbe a mappába illeszd be az előző beadandód végleges változatát, a kiinduló állományodat.
