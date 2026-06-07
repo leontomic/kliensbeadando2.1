@@ -20,6 +20,7 @@ export default function LoginPage() {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            "X-Neptun-Code": import.meta.env.VITE_NEPTUN_CODE
           },
           body: JSON.stringify({
             email,

@@ -30,6 +30,7 @@ function Room() {
             headers: {
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${token}`,
+                "X-Neptun-Code": import.meta.env.VITE_NEPTUN_CODE
             },
             body: JSON.stringify({
                 type: table.type,
@@ -50,6 +51,7 @@ function Room() {
             headers: {
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${token}`,
+                "X-Neptun-Code": import.meta.env.VITE_NEPTUN_CODE
             },
             body: JSON.stringify({
                 x: table.position.x,

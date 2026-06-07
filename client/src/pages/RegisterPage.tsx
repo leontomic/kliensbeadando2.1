@@ -12,13 +12,14 @@ export default function RegisterPage() {
     e.preventDefault();
 
     try {
-      console.log(import.meta.env.VITE_API_URL);
+      
       const response = await fetch(
         `${import.meta.env.VITE_API_URL}/auth/register`,
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            "X-Neptun-Code": import.meta.env.VITE_NEPTUN_CODE
           },
           body: JSON.stringify({
             name,

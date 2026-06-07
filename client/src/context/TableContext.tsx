@@ -42,7 +42,11 @@ export function TableProvider({ children }: { children: ReactNode }) {
       setLoading(true);
       setError(null);
 
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/tables`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/tables`, {
+        headers: {
+          "X-Neptun-Code": import.meta.env.VITE_NEPTUN_CODE,
+        },
+      });
 
       if (!response.ok) {
         throw new Error("Nem sikerült lekérni az asztalokat.");

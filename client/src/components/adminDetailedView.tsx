@@ -26,6 +26,7 @@ function AdminDetailedView() {
             method: "DELETE",
             headers: {
                 Authorization: `Bearer ${token}`,
+                "X-Neptun-Code": import.meta.env.VITE_NEPTUN_CODE
             },
         });
 
@@ -58,6 +59,7 @@ function AdminDetailedView() {
             headers: {
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${token}`,
+                "X-Neptun-Code": import.meta.env.VITE_NEPTUN_CODE
             },
             body: JSON.stringify({
                 type: newType,
